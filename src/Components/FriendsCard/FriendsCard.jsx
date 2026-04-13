@@ -4,13 +4,14 @@ const FriendsCard = () => {
   return (
     <div className="shadow">
       <div className="text-center p-10 bg-white flex flex-col items-center justify-center space-y-2.5">
-        <div>
+        <div className="w-75 h-75 rounded-full ">
           <Image
-            className="rounded-full w-lg"
-            src={`https://images.unsplash.com/photo-1484399172022-72a90b12e3c1`}
-            alt="img"
-            width={100}
-            height={100}
+            src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_1v9BHUenboGM-5dGAdk-fgIrCBEnXsbCw&s`}
+            height={150}
+            width={150}
+            alt="Profile Picture"
+            className="rounded-full object-cover"
+            loading="eager"
           ></Image>
         </div>
         <div>

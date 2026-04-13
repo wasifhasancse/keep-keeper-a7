@@ -1,26 +1,30 @@
 import Link from "next/link";
-import { IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline, IoTimeOutline } from "react-icons/io5";
 import NavItems from "./NavItems";
+import { GoGraph } from "react-icons/go";
 
 const Navbar = () => {
   const navItems = [
     {
       href: "/",
-      title: `Home`,
+      icon: <IoHomeOutline />,
+      title: 'Home',
     },
     {
       href: "/timeline",
+      icon: <IoTimeOutline />,
       title: "Timeline",
     },
     {
       href: "/stats",
+      icon:<GoGraph />,
       title: "Stats",
     },
   ];
   return (
     <nav>
       <div className="navbar bg-base-100 shadow-sm">
-        <div className="navbar-start container mx-auto px-5">
+        <div className="navbar-start container mx-auto px-5 flex-1">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -52,7 +56,7 @@ const Navbar = () => {
             <span className="text-green-900 font-black">Keen</span>Keeper
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden lg:flex flex-1">
           <ul className="menu menu-horizontal px-1 gap-2.5">
             {navItems.map((item, index) => (
                 <NavItems key={index} item={item}/>

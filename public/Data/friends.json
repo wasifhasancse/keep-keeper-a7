@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aisha Khan",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "aisha.khan@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["university", "roommate"],
+    "bio": "Studied engineering at BUET. Now works at a software company in Dhaka. We used to grab tea at TSC regularly.",
+    "goal": 14,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 2,
+    "name": "Md Raihan Ahmed",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "raihan.a@outlook.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["childhood friend", "cricket buddy"],
+    "bio": "Grew up together in Sylhet. Passionate about cricket and photography. Recently moved to Chittagong.",
+    "goal": 14,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 3,
+    "name": "Fatima Begum",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "fatima.b.designer@gmail.com",
+    "days_since_contact": 21,
+    "status": "overdue",
+    "tags": ["design community", "colleague"],
+    "bio": "Talented graphic designer from Uttara. We met at a creative workshop and collaborate on side projects. Loves Bengali culture.",
+    "goal": 21,
+    "next_due_date": "2026-03-23"
+  },
+  {
+    "id": 4,
+    "name": "Karim Hassan",
+    "picture": "https://images.unsplash.com/photo-1507842072343-583f20270319?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "karim.hassan94@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["business partner", "close!"],
+    "bio": "Co-founder of a fintech startup. Met at an entrepreneurship event in Gulshan. We grab lunch at Star Kabab often.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 5,
+    "name": "Nadia Islam",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "nadia.i.med@gmail.com",
+    "days_since_contact": 40,
+    "status": "overdue",
+    "tags": ["medical school", "best friend"],
+    "bio": "Currently doing her residency in orthopedics at a Dhaka hospital. We promised to catch up but life got busy.",
+    "goal": 30,
+    "next_due_date": "2026-03-04"
+  },
+  {
+    "id": 6,
+    "name": "Sabbir Rahman",
+    "picture": "https://images.unsplash.com/photo-1500595046891-a6cc4f5b3e33?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "sabbir.filmmaker@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["film festival", "creative"],
+    "bio": "Independent filmmaker based in Mirpur. We met at the Dhaka International Film Festival. His short films are amazing.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Rina Chakraborty",
+    "picture": "https://images.unsplash.com/photo-1517746915202-4fbcbe7199b0?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "rina.c.teacher@gmail.com",
+    "days_since_contact": 12,
+    "status": "on-track",
+    "tags": ["school", "debating club"],
+    "bio": "English teacher now at a private school in Dhanmondi. We debated together in high school. Still passionate about literature.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 8,
+    "name": "Tariq Abdullah",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "tariq.travel@gmail.com",
+    "days_since_contact": 28,
+    "status": "almost due",
+    "tags": ["adventure", "hiking"],
+    "bio": "Travel blogger exploring Bangladesh. We've hiked in Lawachora and Srimangal together. Always planning the next trek.",
+    "goal": 21,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 9,
+    "name": "Priya Dutta",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "priya.entrepreneur@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["startup accelerator", "mentor"],
+    "bio": "Co-founder of a women-led e-commerce platform. Mentors young entrepreneurs through local programs. Coffee enthusiast from Mohakhali.",
+    "goal": 7,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 10,
+    "name": "Shuvo Roy",
+    "picture": "https://images.unsplash.com/photo-1507842072343-583f20270319?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "email": "shuvo.musician@gmail.com",
+    "days_since_contact": 35,
+    "status": "overdue",
+    "tags": ["music school", "jamming"],
+    "bio": "Talented guitarist and music producer. We used to jam together at the rehearsal space in Bashundhara. He's scoring films now.",
+    "goal": 21,
+    "next_due_date": "2026-03-09"
+  }
+]

@@ -1,9 +1,9 @@
-const Stats = () => {
+const Stats = ({title, value}) => {
   return (
-    <div className="stats shadow">
+    <div className="stats shadow border-2 border-transparent hover:border-green-400 hover:shadow-green-300">
       <div className="stat text-center p-10 bg-white">
-        <div className="stat-value">89,400</div>
-        <div className="stat-desc text-lg">21% more than last month</div>
+        <div className="stat-value">{value}</div>
+        <div className="stat-desc text-lg">{title}</div>
       </div>
     </div>
   );

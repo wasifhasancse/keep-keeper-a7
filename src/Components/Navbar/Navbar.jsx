@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar bg-base-100 shadow-sm">
-        <div className="navbar-start container mx-auto">
+        <div className="navbar-start container mx-auto px-5">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -48,7 +48,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <Link href={"/"} className="text-2xl font-bold text-green-400">
+          <Link href={"/"} className="text-3xl font-bold text-green-400">
             <span className="text-green-900 font-black">Keen</span>Keeper
           </Link>
         </div>

@@ -1,12 +1,12 @@
 import FriendsCard from "@/Components/FriendsCard/FriendsCard";
 import Stats from "@/Components/Stats/Stats";
-import Image from "next/image";
 import Link from "next/link";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export default async function Home() {
-  const friendsData = await fetch(
-    "http://localhost:3000/Data/friends.json",
-  ).then((res) => res.json());
+  const filePath = path.join(process.cwd(), "public", "Data", "friends.json");
+  const friendsData = JSON.parse(await readFile(filePath, "utf-8"));
   return (
     <main className="bg-slate-50">
       <section>

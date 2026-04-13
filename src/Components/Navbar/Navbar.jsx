@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { GoGraph } from "react-icons/go";
 import { IoHomeOutline, IoTimeOutline } from "react-icons/io5";
 import NavItems from "./NavItems";
-import { GoGraph } from "react-icons/go";
 
 const Navbar = () => {
   const navItems = [
     {
       href: "/",
       icon: <IoHomeOutline />,
-      title: 'Home',
+      title: "Home",
     },
     {
       href: "/timeline",
@@ -17,14 +17,14 @@ const Navbar = () => {
     },
     {
       href: "/stats",
-      icon:<GoGraph />,
+      icon: <GoGraph />,
       title: "Stats",
     },
   ];
   return (
     <nav>
       <div className="navbar bg-base-100 shadow-sm">
-        <div className="navbar-start container mx-auto px-5 flex-1">
+        <div className="navbar-start container mx-auto flex-1">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -34,13 +34,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -48,7 +47,7 @@ const Navbar = () => {
               className="menu menu-sm gap-2.5 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {navItems.map((item, index) => (
-                <NavItems key={index} item={item}/>
+                <NavItems key={index} item={item} />
               ))}
             </ul>
           </div>
@@ -59,8 +58,8 @@ const Navbar = () => {
         <div className="navbar-end hidden lg:flex flex-1">
           <ul className="menu menu-horizontal px-1 gap-2.5">
             {navItems.map((item, index) => (
-                <NavItems key={index} item={item}/>
-              ))}
+              <NavItems key={index} item={item} />
+            ))}
           </ul>
         </div>
       </div>

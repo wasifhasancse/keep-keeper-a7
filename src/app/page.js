@@ -14,7 +14,7 @@ export default function Home() {
             nurture the relationships that matter most.
           </p>
           <Link href={'/'}>
-            <button className="btn bg-green-400 hover:bg-green-300 border-2 border-green-500">
+            <button className="px-5 py-2.5 text-lg font-medium rounded-md bg-green-300 hover:bg-green-200 hover:text-green-700 border-2 border-green-500">
               + Add a Friend
             </button>
           </Link>

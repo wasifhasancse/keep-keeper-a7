@@ -52,7 +52,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href={"/"} className="text-3xl font-bold text-green-400">
-            <span className="text-green-900 font-black">Keen</span>Keeper
+            <span className="text-green-900 font-black pl-5">Keen</span>Keeper
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex flex-1">

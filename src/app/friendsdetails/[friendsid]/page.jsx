@@ -1,16 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { FaHistory } from "react-icons/fa";
 import {
   FiArchive,
-  FiClock,
   FiMail,
-  FiMessageSquare,
   FiPhoneCall,
   FiTrash2,
   FiVideo,
 } from "react-icons/fi";
+import { MdOutlineTextsms } from "react-icons/md";
+import { RiNotificationSnoozeLine } from "react-icons/ri";
 
 const formatDate = (isoDate) => {
   const parsedDate = new Date(isoDate);
@@ -55,25 +57,25 @@ const FriendDetails = async ({ params }) => {
       <div className="max-w-11/12 mx-auto grid gap-5 md:grid-cols-[280px_1fr] lg:grid-cols-[310px_1fr] xl:grid-cols-[340px_1fr] md:items-start">
         <aside className="space-y-4">
           <div className="bg-white border border-zinc-200 rounded-lg shadow-sm p-6 text-center">
-            <div className="relative mx-auto size-24 rounded-full overflow-hidden border-4 border-zinc-100">
+            <div className="relative mx-auto size-28 rounded-full overflow-hidden">
               <Image
                 src={picture}
                 alt={name}
                 fill
                 className="object-cover"
-                sizes="96px"
+                sizes="112px"
               />
             </div>
 
             <h1 className="text-2xl font-bold text-zinc-800 mt-4">{name}</h1>
 
             <span
-              className={`px-8 py-1.5 font-medium capitalize rounded-full ${status == "almost due" ? "bg-yellow-100 text-yellow-700" : status == "overdue" ? "bg-red-100 text-red-700" : "bg-sky-100 text-sky-700"}`}
+              className={`inline-block mt-3 px-8 py-1.5 font-medium capitalize rounded-full ${status == "almost due" ? "bg-yellow-100 text-yellow-700" : status == "overdue" ? "bg-red-100 text-red-700" : "bg-sky-100 text-sky-700"}`}
             >
               {status}
             </span>
 
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-2.5">
               {tags.map((tag) => (
                 <span
                   key={tag}
@@ -84,31 +86,31 @@ const FriendDetails = async ({ params }) => {
               ))}
             </div>
 
-            <p className="mt-4 text-zinc-500 italic text-sm leading-relaxed">
+            <p className="mt-5 text-zinc-500 italic text-sm leading-relaxed max-w-[36ch] mx-auto">
               {bio}
             </p>
 
-            <p className="mt-3 inline-flex items-center gap-2 text-sm text-zinc-500">
+            <p className="mt-4 inline-flex items-center justify-center gap-2 text-sm text-zinc-500">
               <FiMail className="text-base" />
               {email}
             </p>
           </div>
 
-          <button className="w-full rounded-md border border-zinc-200 bg-white py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition-colors">
+          <button className="w-full rounded-md border border-zinc-300 bg-zinc-50 py-3 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
             <span className="inline-flex items-center gap-2">
-              <FiClock />
+              <RiNotificationSnoozeLine />
               Snooze 2 Weeks
             </span>
           </button>
 
-          <button className="w-full rounded-md border border-zinc-200 bg-white py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition-colors">
+          <button className="w-full rounded-md border border-zinc-300 bg-zinc-50 py-3 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
             <span className="inline-flex items-center gap-2">
               <FiArchive />
               Archive
             </span>
           </button>
 
-          <button className="w-full rounded-md border border-red-200 bg-white py-3 text-red-500 font-medium hover:bg-red-50 transition-colors">
+          <button className="w-full rounded-md border border-zinc-300 bg-zinc-50 py-3 text-red-500 font-medium hover:border-red-300 hover:bg-red-50 transition-colors">
             <span className="inline-flex items-center gap-2">
               <FiTrash2 />
               Delete
@@ -145,7 +147,7 @@ const FriendDetails = async ({ params }) => {
               <p className="text-2xl font-medium text-green-800">
                 Relationship Goal
               </p>
-              <button className="px-4 py-1.5 rounded-md border border-zinc-300 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-sm">
+              <button className="px-4 py-1.5 font-semibold rounded-md border border-zinc-300 bg-zinc-50 hover:border-green-300 hover:bg-green-50 text-zinc-700 text-sm transition-colors">
                 Edit
               </button>
             </div>
@@ -163,19 +165,19 @@ const FriendDetails = async ({ params }) => {
               <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
                 <span className="flex flex-col items-center justify-center gap-2">
                   <FiPhoneCall className="text-xl" />
-                  <span>Call</span>
+                  <span className="font-semibold">Call</span>
                 </span>
               </button>
               <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
                 <span className="flex flex-col items-center justify-center gap-2">
-                  <FiMessageSquare className="text-xl" />
-                  <span>Text</span>
+                  <MdOutlineTextsms className="text-xl" />
+                  <span className="font-semibold">Text</span>
                 </span>
               </button>
               <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
                 <span className="flex flex-col items-center justify-center gap-2">
                   <FiVideo className="text-xl" />
-                  <span>Video</span>
+                  <span className="font-semibold">Video</span>
                 </span>
               </button>
             </div>
@@ -186,26 +188,15 @@ const FriendDetails = async ({ params }) => {
               <p className="text-2xl font-medium text-green-800">
                 Recent Interactions
               </p>
-              <button className="px-4 py-1.5 rounded-md border border-zinc-300 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-sm">
-                Full History
+              <Link href={'/timeline'}>
+                <button className="flex items-center justify-center gap-1.5 px-4 py-1.5 font-semibold rounded-md border border-zinc-300 bg-zinc-50 hover:border-green-300 hover:bg-green-50 text-zinc-700 text-sm transition-colors">
+                <FaHistory /> Full History
               </button>
+              </Link>
             </div>
 
-            <div className="space-y-3">
-              {["Text", "Meetup", "Video", "Text"].map((item, index) => (
-                <div
-                  key={`${item}-${index}`}
-                  className="border-t border-zinc-100 pt-3 flex items-center justify-between text-zinc-600"
-                >
-                  <div>
-                    <p className="font-medium text-zinc-700">{item}</p>
-                    <p className="text-sm text-zinc-500">
-                      Asked for career advice
-                    </p>
-                  </div>
-                  <p className="text-sm">Jan 28, 2026</p>
-                </div>
-              ))}
+            <div>
+              {/* history card will be show here! */}
             </div>
           </div>
         </div>

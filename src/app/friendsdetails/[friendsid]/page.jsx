@@ -165,9 +165,9 @@ const FriendDetails = async ({ params }) => {
             </p>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
               {/* client components */}
-              <ManageCallButton friendInfo={friendInfo} />
-              <ManageTextButton friendInfo={friendInfo} />
-              <ManageVideoButton friendInfo={friendInfo} />
+              <ManageCallButton name={name} id={id} />
+              <ManageTextButton name={name} id={id}/>
+              <ManageVideoButton name={name} id={id}/>
             </div>
           </div>
 

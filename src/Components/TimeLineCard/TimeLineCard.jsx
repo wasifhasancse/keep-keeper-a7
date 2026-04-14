@@ -1,10 +1,9 @@
 "use client";
 import { DataContext } from "@/context/DataContextProvider";
 import { useContext } from "react";
-import { PiPhoneCall } from "react-icons/pi";
 
 const TimeLineCard = () => {
-  const { allCallData } = useContext(DataContext);
+  const { timeLineData } = useContext(DataContext);
 
   const formatDateTime = (value) => {
     const parsed = value ? new Date(value) : new Date();
@@ -22,27 +21,27 @@ const TimeLineCard = () => {
 
   return (
     <>
-      {allCallData?.map((callData, index) => (
+      {timeLineData?.map((timeLineInfo, index) => (
         <div
           key={index}
           className="bg-white border border-zinc-200 rounded-xl px-5 py-4 shadow-sm hover:border-green-200 hover:shadow-md transition-all"
         >
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-100 text-zinc-700">
-              <PiPhoneCall className="text-xl leading-none" />
+            <span className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-zinc-700 ${timeLineInfo.type == 'Call'?'bg-green-100':timeLineInfo.type == 'Video'? 'bg-cyan-100':"bg-indigo-100"}`}>
+              {timeLineInfo.icon}
             </span>
 
             <div className="min-w-0">
               <p className="leading-tight">
                 <span className="text-2xl font-semibold text-green-900">
-                  Call
+                  {timeLineInfo.type}
                 </span>
                 <span className="text-xl text-slate-600 ml-2">
-                  with {callData.name}
+                  with {timeLineInfo.name}
                 </span>
               </p>
               <p className="text-lg text-slate-500 mt-1">
-                {formatDateTime(callData?.dateTime)}
+                {formatDateTime(timeLineInfo?.dateTime)}
               </p>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import TimeLineCard from "@/Components/TimeLineCard/TimeLineCard";
 
 
 const TimeLine = () => {
@@ -65,25 +66,8 @@ const TimeLine = () => {
         </div>
 
         <div className="space-y-4">
-          {timelineEntries.map((entry) => (
-            <div
-              key={entry.id}
-              className="bg-white border border-zinc-200 rounded-lg px-4 py-3 md:px-5 md:py-4 shadow-sm hover:border-green-200 hover:shadow transition-colors"
-            >
-              <div className="flex items-start gap-3">
-                <span className="text-2xl leading-none mt-1">{entry.icon}</span>
-                <div>
-                  <p className="text-2xl font-semibold text-green-900 leading-tight inline">
-                    {entry.type}
-                  </p>
-                  <span className="text-xl text-slate-500 ml-2">
-                    with {entry.friend}
-                  </span>
-                  <p className="text-lg text-slate-500 mt-1">{entry.date}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+          {/* client component */}
+          <TimeLineCard/>
         </div>
       </div>
     </section>

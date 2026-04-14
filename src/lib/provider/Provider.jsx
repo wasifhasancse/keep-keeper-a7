@@ -1,10 +1,10 @@
 import DataContextProvider from '@/context/DataContextProvider';
 import React from 'react';
 
-const Provider = ({childern}) => {
+const Provider = ({children}) => {
   return (
     <DataContextProvider>
-      {childern}
+      {children}
     </DataContextProvider>
   );
 };

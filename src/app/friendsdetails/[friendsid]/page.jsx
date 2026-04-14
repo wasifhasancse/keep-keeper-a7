@@ -1,3 +1,7 @@
+import HistoryCard from "@/Components/FriendsDetails/HistoryCard";
+import ManageCallButton from "@/Components/FriendsDetails/ManageCallButton";
+import ManageTextButton from "@/Components/FriendsDetails/ManageTextButton";
+import ManageVideoButton from "@/Components/FriendsDetails/ManageVideoButton";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,11 +11,8 @@ import { FaHistory } from "react-icons/fa";
 import {
   FiArchive,
   FiMail,
-  FiPhoneCall,
-  FiTrash2,
-  FiVideo,
+  FiTrash2
 } from "react-icons/fi";
-import { MdOutlineTextsms } from "react-icons/md";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 
 const formatDate = (isoDate) => {
@@ -41,6 +42,7 @@ const FriendDetails = async ({ params }) => {
   }
 
   const {
+    id,
     name,
     picture,
     email,
@@ -162,24 +164,10 @@ const FriendDetails = async ({ params }) => {
               Quick Check-In
             </p>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
-              <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
-                <span className="flex flex-col items-center justify-center gap-2">
-                  <FiPhoneCall className="text-xl" />
-                  <span className="font-semibold">Call</span>
-                </span>
-              </button>
-              <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
-                <span className="flex flex-col items-center justify-center gap-2">
-                  <MdOutlineTextsms className="text-xl" />
-                  <span className="font-semibold">Text</span>
-                </span>
-              </button>
-              <button className="rounded-md border border-zinc-300 bg-zinc-50 py-5 text-zinc-700 hover:border-green-300 hover:bg-green-50 transition-colors">
-                <span className="flex flex-col items-center justify-center gap-2">
-                  <FiVideo className="text-xl" />
-                  <span className="font-semibold">Video</span>
-                </span>
-              </button>
+              {/* client components */}
+              <ManageCallButton friendInfo={friendInfo} />
+              <ManageTextButton friendInfo={friendInfo} />
+              <ManageVideoButton friendInfo={friendInfo} />
             </div>
           </div>
 
@@ -188,15 +176,15 @@ const FriendDetails = async ({ params }) => {
               <p className="text-2xl font-medium text-green-800">
                 Recent Interactions
               </p>
-              <Link href={'/timeline'}>
+              <Link href={"/timeline"}>
                 <button className="flex items-center justify-center gap-1.5 px-4 py-1.5 font-semibold rounded-md border border-zinc-300 bg-zinc-50 hover:border-green-300 hover:bg-green-50 text-zinc-700 text-sm transition-colors">
-                <FaHistory /> Full History
-              </button>
+                  <FaHistory /> Full History
+                </button>
               </Link>
             </div>
 
             <div>
-              {/* history card will be show here! */}
+              <HistoryCard id={id} />
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
 "use client";
 import { DataContext } from "@/context/DataContextProvider";
 import { useContext } from "react";
+import { FiPhoneCall, FiVideo } from "react-icons/fi";
+import { MdOutlineTextsms } from "react-icons/md";
 
 const TimeLineCard = () => {
   const { timeLineData } = useContext(DataContext);
+  const isEmpty = timeLineData.length === 0;
 
   const formatDateTime = (value) => {
     const parsed = value ? new Date(value) : new Date();
@@ -19,6 +22,30 @@ const TimeLineCard = () => {
     }).format(date);
   };
 
+  if (isEmpty) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-5 py-20 px-6 text-center rounded-xl border-2 border-dashed border-zinc-200 bg-white">
+        <div className="flex gap-4 text-4xl sm:text-5xl">
+          <span><FiPhoneCall className="text-3xl text-green-400" /></span>
+          <span><MdOutlineTextsms className="text-3xl text-cyan-400" /></span>
+          <span><FiVideo className="text-3xl text-indigo-400" /></span>
+        </div>
+        <div>
+          <p className="text-xl sm:text-2xl font-bold text-zinc-700">
+            Your timeline is empty
+          </p>
+          <p className="text-sm sm:text-base text-zinc-400 mt-2 max-w-sm mx-auto">
+            Once you log a call, text, or video with a friend it will show up
+            here in chronological order.
+          </p>
+        </div>
+        <span className="px-4 py-1.5 rounded-full bg-green-50 border border-green-200 text-green-600 text-xs font-semibold tracking-wide uppercase">
+          No interactions yet
+        </span>
+      </div>
+    );
+  }
+
   return (
     <>
       {timeLineData?.map((timeLineInfo, index) => (
@@ -27,7 +54,9 @@ const TimeLineCard = () => {
           className="bg-white border border-zinc-200 rounded-xl px-5 py-4 shadow-sm hover:border-green-200 hover:shadow-md transition-all"
         >
           <div className="flex items-center gap-3">
-            <span className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-zinc-700 ${timeLineInfo.type == 'Call'?'bg-green-100':timeLineInfo.type == 'Video'? 'bg-cyan-100':"bg-indigo-100"}`}>
+            <span
+              className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-zinc-700 ${timeLineInfo.type == "Call" ? "bg-green-100" : timeLineInfo.type == "Video" ? "bg-cyan-100" : "bg-indigo-100"}`}
+            >
               {timeLineInfo.icon}
             </span>
 

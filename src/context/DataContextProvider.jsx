@@ -12,7 +12,7 @@ const DataContextProvider = ({ children }) => {
     const callDataObject = {
       id: id,
       name: name,
-      icon: <FiPhoneCall className="text-xl" />,
+      icon: <FiPhoneCall className="text-2xl" />,
       type: "Call",
       dateTime: new Date().toISOString(),
     };
@@ -23,7 +23,7 @@ const DataContextProvider = ({ children }) => {
     const textDataObject = {
       id: id,
       name: name,
-      icon: <MdOutlineTextsms className="text-xl" />,
+      icon: <MdOutlineTextsms className="text-2xl" />,
       type: "Text",
       dateTime: new Date().toISOString(),
     };

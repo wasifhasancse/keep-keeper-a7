@@ -1,4 +1,5 @@
 import FilterData from "@/Components/TimeLine/FilterData";
+import Searching from "@/Components/TimeLine/Searching";
 import SortedData from "@/Components/TimeLine/SortedData";
 import TimeLineCard from "@/Components/TimeLine/TimeLineCard";
 import { FiSearch } from "react-icons/fi";
@@ -20,14 +21,8 @@ const TimeLine = () => {
               <label className="text-sm font-medium text-zinc-600">
                 Search
               </label>
-              <div className="relative">
-                <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 z-10 pointer-events-none" />
-                <input
-                  type="text"
-                  placeholder="Search by friend or interaction type"
-                  className="input input-bordered w-full bg-zinc-50 border-zinc-200 pl-9 focus:outline-none focus:border-green-400"
-                />
-              </div>
+              {/* client component */}
+              <Searching/>
             </div>
 
             {/* Filter Type */}

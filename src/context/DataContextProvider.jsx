@@ -75,10 +75,17 @@ const DataContextProvider = ({ children }) => {
       } else {
         setFilteredData(filteredData);
       }
+  };
 
-      // const sortedData = [...filteredData].sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
-      // setFilteredData(sortedData);
-
+  const manageSearch = (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const searchedData = timeLineData.filter((item) => {
+      return (
+        item.name.toLowerCase().includes(searchTerm) ||
+        item.type.toLowerCase().includes(searchTerm)
+      );
+    });
+    setFilteredData(searchedData);
   };
 
 
@@ -90,6 +97,7 @@ const DataContextProvider = ({ children }) => {
     filteredData,
     manageFilter,
     manageSort,
+    manageSearch
   };
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;

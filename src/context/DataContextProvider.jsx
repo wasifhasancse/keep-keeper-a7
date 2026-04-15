@@ -2,6 +2,7 @@
 import { createContext, useState } from "react";
 import { FiPhoneCall, FiVideo } from "react-icons/fi";
 import { MdOutlineTextsms } from "react-icons/md";
+import { toast } from "react-toastify";
 
 export const DataContext = createContext();
 
@@ -9,6 +10,10 @@ const DataContextProvider = ({ children }) => {
   const [timeLineData, setTimeLineData] = useState([]);
 
   const manageCall = (name, id) => {
+    toast.success('Call logged successfully!', {
+      icon: <FiPhoneCall className="text-2xl" />,
+    });
+
     const callDataObject = {
       id: id,
       name: name,
@@ -20,6 +25,9 @@ const DataContextProvider = ({ children }) => {
     setTimeLineData(newTimeLineData);
   };
   const manageText = (name, id) => {
+    toast.success('Text logged successfully!', {
+      icon: <MdOutlineTextsms className="text-2xl" />,
+    });
     const textDataObject = {
       id: id,
       name: name,
@@ -31,6 +39,9 @@ const DataContextProvider = ({ children }) => {
     setTimeLineData(newTimeLineData);
   };
   const manageVideo = (name, id) => {
+    toast.success('Video logged successfully!', {
+      icon: <FiVideo className="text-2xl" />,
+    });
     const videoDataObject = {
       id: id,
       name: name,

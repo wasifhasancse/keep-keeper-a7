@@ -6,9 +6,6 @@ import { MdOutlineTextsms } from "react-icons/md";
 export const DataContext = createContext();
 
 const DataContextProvider = ({ children }) => {
-  const [allCallData, setCallData] = useState([]);
-  const [allTextData, setTextData] = useState([]);
-  const [allVideoData, setVideoData] = useState([]);
   const [timeLineData, setTimeLineData] = useState([]);
 
   const manageCall = (name, id) => {
@@ -19,8 +16,6 @@ const DataContextProvider = ({ children }) => {
       type: "Call",
       dateTime: new Date().toISOString(),
     };
-    const newCallData = [...allCallData, callDataObject];
-    setCallData(newCallData);
     const newTimeLineData = [...timeLineData, callDataObject];
     setTimeLineData(newTimeLineData);
   };
@@ -32,8 +27,6 @@ const DataContextProvider = ({ children }) => {
       type: "Text",
       dateTime: new Date().toISOString(),
     };
-    const newTextData = [...allTextData, textDataObject];
-    setTextData(newTextData);
     const newTimeLineData = [...timeLineData, textDataObject];
     setTimeLineData(newTimeLineData);
   };
@@ -45,15 +38,10 @@ const DataContextProvider = ({ children }) => {
       type: "Video",
       dateTime: new Date().toISOString(),
     };
-    const newVideoData = [...allVideoData, name];
-    setVideoData(newVideoData);
     const newTimeLineData = [...timeLineData, videoDataObject];
     setTimeLineData(newTimeLineData);
   };
   const data = {
-    allCallData,
-    allTextData,
-    allVideoData,
     manageCall,
     manageText,
     manageVideo,

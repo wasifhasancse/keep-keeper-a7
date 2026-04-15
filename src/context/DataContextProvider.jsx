@@ -65,6 +65,22 @@ const DataContextProvider = ({ children }) => {
       setFilteredData(filteredData);
     }
   };
+  const manageSort = (sortType) => {
+      if (sortType === "Newest") {
+        const sortedData = [...filteredData].sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime));
+        setFilteredData(sortedData);
+      } else if (sortType === "Oldest") {
+        const sortedData = [...filteredData].sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+        setFilteredData(sortedData);
+      } else {
+        setFilteredData(filteredData);
+      }
+
+      // const sortedData = [...filteredData].sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+      // setFilteredData(sortedData);
+
+  };
+
 
   const data = {
     manageCall,
@@ -73,6 +89,7 @@ const DataContextProvider = ({ children }) => {
     timeLineData,
     filteredData,
     manageFilter,
+    manageSort,
   };
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;

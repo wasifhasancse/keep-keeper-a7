@@ -1,4 +1,5 @@
 import FilterData from "@/Components/TimeLine/FilterData";
+import SortedData from "@/Components/TimeLine/SortedData";
 import TimeLineCard from "@/Components/TimeLine/TimeLineCard";
 import { FiSearch } from "react-icons/fi";
 
@@ -43,10 +44,8 @@ const TimeLine = () => {
               <label className="text-sm font-medium text-zinc-600">
                 Sort By Date
               </label>
-              <select className="select select-bordered w-full bg-zinc-50 border-zinc-200 focus:outline-none focus:border-green-400">
-                <option>Newest</option>
-                <option>Oldest</option>
-              </select>
+              {/* client component */}
+              <SortedData/>
             </div>
           </div>
         </div>

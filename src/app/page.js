@@ -42,9 +42,7 @@ export default async function Home() {
         />
         <Stats
           title={"Need Attention"}
-          value={
-            friendsData.filter((item) => item.days_since_contact > 30).length
-          }
+          value={friendsData.filter((item) => item.days_since_contact > item.goal).length}
         />
         <Stats
           title={"Interactions This Month"}

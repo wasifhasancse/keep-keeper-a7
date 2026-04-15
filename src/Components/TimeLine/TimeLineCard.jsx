@@ -5,8 +5,8 @@ import { FiPhoneCall, FiVideo } from "react-icons/fi";
 import { MdOutlineTextsms } from "react-icons/md";
 
 const TimeLineCard = () => {
-  const { timeLineData } = useContext(DataContext);
-  const isEmpty = timeLineData.length === 0;
+  const { filteredData } = useContext(DataContext);
+  const isEmpty = filteredData.length === 0;
 
   const formatDateTime = (value) => {
     const parsed = value ? new Date(value) : new Date();
@@ -51,7 +51,7 @@ const TimeLineCard = () => {
           </span>
         </div>
       ) : (
-        timeLineData?.map((timeLineInfo, index) => (
+        filteredData?.map((timeLineInfo, index) => (
           <div
             key={index}
             className="bg-white border border-zinc-200 rounded-xl px-5 py-4 shadow-sm hover:border-green-200 hover:shadow-md transition-all"

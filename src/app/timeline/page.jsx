@@ -1,5 +1,6 @@
-import TimeLineCard from "@/Components/TimeLineCard/TimeLineCard";
-
+import FilterData from "@/Components/TimeLine/FilterData";
+import TimeLineCard from "@/Components/TimeLine/TimeLineCard";
+import { FiSearch } from "react-icons/fi";
 
 const TimeLine = () => {
   return (
@@ -7,67 +8,52 @@ const TimeLine = () => {
       <div className="max-w-11/12 mx-auto space-y-6">
         <h2 className="text-5xl font-bold text-zinc-800">Timeline</h2>
 
-        <div className="bg-white border border-zinc-200 rounded-lg p-4 md:p-5 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
-            <label className="form-control w-full xl:col-span-2">
-              <div className="label pb-1">
-                <span className="label-text font-medium text-zinc-600">
-                  Search
-                </span>
-              </div>
-              <input
-                type="text"
-                placeholder="Search by friend or interaction type"
-                className="input input-bordered w-full bg-zinc-50 border-zinc-200 focus:outline-none"
-              />
-            </label>
+        <div className="bg-white border border-zinc-200 rounded-xl p-5 md:p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-wide text-zinc-400 mb-4">
+            Filter &amp; Search
+          </p>
 
-            <label className="form-control w-full">
-              <div className="label pb-1">
-                <span className="label-text font-medium text-zinc-600">
-                  Filter Type
-                </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[1fr_180px_180px] gap-4 items-end">
+            {/* Search */}
+            <div className="flex flex-col gap-1">
+              <label className="text-sm font-medium text-zinc-600">
+                Search
+              </label>
+              <div className="relative">
+                <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 z-10 pointer-events-none" />
+                <input
+                  type="text"
+                  placeholder="Search by friend or interaction type"
+                  className="input input-bordered w-full bg-zinc-50 border-zinc-200 pl-9 focus:outline-none focus:border-green-400"
+                />
               </div>
-              <select className="select select-bordered w-full bg-zinc-50 border-zinc-200">
-                <option>All</option>
-                <option>Call</option>
-                <option>Text</option>
-                <option>Video</option>
-              </select>
-            </label>
+            </div>
 
-            <label className="form-control w-full">
-              <div className="label pb-1">
-                <span className="label-text font-medium text-zinc-600">
-                  Sort By Date
-                </span>
-              </div>
-              <select className="select select-bordered w-full bg-zinc-50 border-zinc-200">
+            {/* Filter Type */}
+            <div className="flex flex-col gap-1">
+              <label className="text-sm font-medium text-zinc-600">
+                Filter Type
+              </label>
+              {/* client component */}
+              <FilterData/>
+            </div>
+
+            {/* Sort By Date */}
+            <div className="flex flex-col gap-1">
+              <label className="text-sm font-medium text-zinc-600">
+                Sort By Date
+              </label>
+              <select className="select select-bordered w-full bg-zinc-50 border-zinc-200 focus:outline-none focus:border-green-400">
                 <option>Newest</option>
                 <option>Oldest</option>
               </select>
-            </label>
-          </div>
-
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <button className="px-4 py-2 rounded-full border border-zinc-300 bg-zinc-50 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
-              All
-            </button>
-            <button className="px-4 py-2 rounded-full border border-zinc-300 bg-zinc-50 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
-              Call
-            </button>
-            <button className="px-4 py-2 rounded-full border border-zinc-300 bg-zinc-50 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
-              Text
-            </button>
-            <button className="px-4 py-2 rounded-full border border-zinc-300 bg-zinc-50 text-zinc-700 font-medium hover:border-green-300 hover:bg-green-50 transition-colors">
-              Video
-            </button>
+            </div>
           </div>
         </div>
 
         <div className="space-y-4">
           {/* client component */}
-          <TimeLineCard/>
+          <TimeLineCard />
         </div>
       </div>
     </section>

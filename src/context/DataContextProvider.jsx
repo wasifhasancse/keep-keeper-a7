@@ -8,6 +8,7 @@ export const DataContext = createContext();
 
 const DataContextProvider = ({ children }) => {
   const [timeLineData, setTimeLineData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
   const manageCall = (name, id) => {
     toast.success('Call logged successfully!', {
@@ -23,6 +24,7 @@ const DataContextProvider = ({ children }) => {
     };
     const newTimeLineData = [...timeLineData, callDataObject];
     setTimeLineData(newTimeLineData);
+    setFilteredData(newTimeLineData);
   };
   const manageText = (name, id) => {
     toast.success('Text logged successfully!', {
@@ -37,6 +39,7 @@ const DataContextProvider = ({ children }) => {
     };
     const newTimeLineData = [...timeLineData, textDataObject];
     setTimeLineData(newTimeLineData);
+    setFilteredData(newTimeLineData);
   };
   const manageVideo = (name, id) => {
     toast.success('Video logged successfully!', {
@@ -51,12 +54,25 @@ const DataContextProvider = ({ children }) => {
     };
     const newTimeLineData = [...timeLineData, videoDataObject];
     setTimeLineData(newTimeLineData);
+    setFilteredData(newTimeLineData);
   };
+
+  const manageFilter = (type) => {
+    if (type === "All") {
+      setFilteredData(timeLineData);
+    } else {
+      const filteredData = timeLineData.filter((item) => item.type === type);
+      setFilteredData(filteredData);
+    }
+  };
+
   const data = {
     manageCall,
     manageText,
     manageVideo,
     timeLineData,
+    filteredData,
+    manageFilter,
   };
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;

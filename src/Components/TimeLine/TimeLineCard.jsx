@@ -26,9 +26,9 @@ const TimeLineCard = () => {
     <>
       {isEmpty ? (
         <div className="flex flex-col items-center justify-center gap-5 py-20 px-6 text-center rounded-xl border-2 border-dashed border-zinc-200 bg-white">
-          <div className="flex gap-4 text-4xl sm:text-5xl">
+          <div className="flex gap-4 text-4xl md:text-5xl lg:text-5xl">
             <span>
-              <FiPhoneCall className="text-3xl text-green-400" />
+              <FiPhoneCall className="text-3xl text-green-300" />
             </span>
             <span>
               <MdOutlineTextsms className="text-3xl text-cyan-400" />
@@ -38,10 +38,10 @@ const TimeLineCard = () => {
             </span>
           </div>
           <div>
-            <p className="text-xl sm:text-2xl font-bold text-zinc-700">
+            <p className="text-xl md:text-2xl lg:text-2xl font-bold text-zinc-700">
               Your timeline is empty
             </p>
-            <p className="text-sm sm:text-base text-zinc-400 mt-2 max-w-sm mx-auto">
+            <p className="text-sm md:text-base lg:text-base text-zinc-400 mt-2 max-w-sm mx-auto">
               Once you log a call, text, or video with a friend it will show up
               here in chronological order.
             </p>
@@ -54,7 +54,7 @@ const TimeLineCard = () => {
         filteredData?.map((timeLineInfo, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-xl px-5 py-4 shadow-sm hover:border-green-200 hover:shadow-md transition-all"
+            className="bg-white border-2 border-zinc-200 rounded-xl px-5 py-4 shadow-sm hover:border-green-200 hover:shadow-md transition-all"
           >
             <div className="flex items-center gap-3">
               <span

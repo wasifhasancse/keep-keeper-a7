@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { DataContext } from "@/context/DataContextProvider";
 import { useContext } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -11,7 +11,7 @@ const Searching = () => {
       <input
         type="search"
         placeholder="Search by friend or interaction type"
-        className="input input-bordered w-full bg-zinc-50 border-zinc-200 pl-9 focus:outline-none focus:border-green-400"
+        className="input input-bordered w-full bg-zinc-50 border-zinc-200 pl-9 focus:outline-none focus:border-green-300 hover:bg-green-50 hover:border-green-200 transition-colors"
         onChange={manageSearch}
       />
     </div>

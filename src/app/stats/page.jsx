@@ -28,7 +28,7 @@ const Stats = () => {
           {isEmpty ? (
             <div className="flex flex-col items-center justify-center gap-4 py-20 text-center">
               <span className="text-6xl">
-                <FaChartPie className="text-7xl text-green-400" />
+                <FaChartPie className="text-7xl text-green-300" />
               </span>
               <div>
                 <p className="text-xl font-semibold text-zinc-700">

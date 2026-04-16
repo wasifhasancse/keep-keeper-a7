@@ -22,14 +22,16 @@ const HistoryCard = ({ id }) => {
   return (
     <>
       {isEmpty ? (
-        <div className="rounded-xl border-2 border-dashed border-zinc-200 bg-zinc-50/80 px-4 py-8 sm:px-6 sm:py-10 text-center">
+        <div className="rounded-xl border-2 border-dashed border-zinc-200 bg-zinc-50/80 px-4 py-8 md:px-6 md:py-10 lg:px-6 lg:py-10 text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-zinc-200 text-2xl">
-            <span aria-hidden="true"><MdPhonelinkOff /></span>
+            <span aria-hidden="true">
+              <MdPhonelinkOff />
+            </span>
           </div>
-          <p className="text-lg sm:text-xl font-semibold text-zinc-700">
+          <p className="text-lg md:text-xl lg:text-xl font-semibold text-zinc-700">
             No history found yet
           </p>
-          <p className="mt-1 text-sm sm:text-base text-zinc-500 max-w-md mx-auto">
+          <p className="mt-1 text-sm md:text-base lg:text-base text-zinc-500 max-w-md mx-auto">
             Your interaction log with this friend is still empty. Add a call,
             text, or video activity to see it here.
           </p>

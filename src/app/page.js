@@ -25,7 +25,7 @@ export default async function Home() {
                 nurture the relationships that matter most.
               </p>
               <Link href={""}>
-                <button className="px-5 py-2.5 text-lg font-medium rounded-md bg-green-300 hover:bg-green-200 hover:text-green-700 border-2 border-green-500 hover:shadow hover:shadow-green-300 cursor-pointer">
+                <button className="px-5 py-2.5 text-lg font-medium rounded-md bg-green-300 hover:bg-green-200 hover:text-green-700 border-2 border-green-300 hover:shadow hover:shadow-green-300 cursor-pointer">
                   + Add a Friend
                 </button>
               </Link>
@@ -42,7 +42,10 @@ export default async function Home() {
         />
         <Stats
           title={"Need Attention"}
-          value={friendsData.filter((item) => item.days_since_contact > item.goal).length}
+          value={
+            friendsData.filter((item) => item.days_since_contact > item.goal)
+              .length
+          }
         />
         <Stats
           title={"Interactions This Month"}

@@ -3,6 +3,7 @@ import Navbar from "@/Components/Navbar/Navbar";
 import Provider from "@/lib/provider/Provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/Components/Scroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Provider>
+          <ScrollToTop/>
           <Navbar />
           {children}
           <Footer />

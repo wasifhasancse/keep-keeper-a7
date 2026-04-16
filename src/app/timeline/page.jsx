@@ -2,7 +2,6 @@ import FilterData from "@/Components/TimeLine/FilterData";
 import Searching from "@/Components/TimeLine/Searching";
 import SortedData from "@/Components/TimeLine/SortedData";
 import TimeLineCard from "@/Components/TimeLine/TimeLineCard";
-import { FiSearch } from "react-icons/fi";
 
 const TimeLine = () => {
   return (
@@ -15,14 +14,14 @@ const TimeLine = () => {
             Filter &amp; Search
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[1fr_180px_180px] gap-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[1fr_180px_180px] gap-4 items-end">
             {/* Search */}
             <div className="flex flex-col gap-1">
               <label className="text-sm font-medium text-zinc-600">
                 Search
               </label>
               {/* client component */}
-              <Searching/>
+              <Searching />
             </div>
 
             {/* Filter Type */}
@@ -31,7 +30,7 @@ const TimeLine = () => {
                 Filter Type
               </label>
               {/* client component */}
-              <FilterData/>
+              <FilterData />
             </div>
 
             {/* Sort By Date */}
@@ -40,7 +39,7 @@ const TimeLine = () => {
                 Sort By Date
               </label>
               {/* client component */}
-              <SortedData/>
+              <SortedData />
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ const FriendsCard = ({ friendInfo }) => {
             ))}
           </div>
           <span
-            className={`px-8 py-1.5 font-medium capitalize rounded-full ${status == "almost due" ? "bg-yellow-100 text-yellow-700" : status == "overdue" ? "bg-red-100 text-red-700" : "bg-sky-100 text-sky-700"}`}
+            className={`px-8 py-1.5 font-medium capitalize rounded-full ${status == "almost due" ? "bg-yellow-200 text-yellow-700" : status == "overdue" ? "bg-red-200 text-red-700" : "bg-sky-200 text-sky-700"}`}
           >
             {status}
           </span>

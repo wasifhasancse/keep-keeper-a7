@@ -8,11 +8,7 @@ import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { FaHistory } from "react-icons/fa";
-import {
-  FiArchive,
-  FiMail,
-  FiTrash2
-} from "react-icons/fi";
+import { FiArchive, FiMail, FiTrash2 } from "react-icons/fi";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 
 const formatDate = (isoDate) => {
@@ -121,7 +117,7 @@ const FriendDetails = async ({ params }) => {
         </aside>
 
         <div className="space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg border border-zinc-200 shadow-sm p-6 text-center">
               <p className="text-3xl lg:text-4xl font-bold text-zinc-700">
                 {days_since_contact}
@@ -163,16 +159,16 @@ const FriendDetails = async ({ params }) => {
             <p className="text-2xl font-medium text-green-800">
               Quick Check-In
             </p>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3">
               {/* client components */}
               <ManageCallButton name={name} id={id} />
-              <ManageTextButton name={name} id={id}/>
-              <ManageVideoButton name={name} id={id}/>
+              <ManageTextButton name={name} id={id} />
+              <ManageVideoButton name={name} id={id} />
             </div>
           </div>
 
           <div className="bg-white rounded-lg border border-zinc-200 shadow-sm p-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-3">
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between lg:flex-row lg:items-center lg:justify-between mb-3">
               <p className="text-2xl font-medium text-green-800">
                 Recent Interactions
               </p>

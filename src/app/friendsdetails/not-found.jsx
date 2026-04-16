@@ -34,15 +34,15 @@ const PageNotFound = () => {
         {/* Content */}
         <div className="text-center md:text-left max-w-md">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
-            4<span className="text-green-400">0</span>4
+            4<span className="text-green-400 px-1.5">0</span>4
           </h1>
 
           <h2 className="mt-2 text-lg md:text-xl font-semibold text-gray-700">
-            Oops! Page not found
+            Oops! User not found
           </h2>
 
           <p className="mt-3 text-gray-500 text-sm md:text-base leading-relaxed">
-            Sorry, the page you’re looking for doesn’t exist, has been removed
+            Sorry, the user you’re looking for doesn’t exist, has been removed
             or is temporarily unavailable.
           </p>
 

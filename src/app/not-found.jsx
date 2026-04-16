@@ -34,7 +34,7 @@ const PageNotFound = () => {
         {/* Content */}
         <div className="text-center md:text-left max-w-md">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800">
-            4<span className="text-green-400">0</span>4
+            4<span className="text-green-400 px-1.5">0</span>4
           </h1>
 
           <h2 className="mt-2 text-lg md:text-xl font-semibold text-gray-700">

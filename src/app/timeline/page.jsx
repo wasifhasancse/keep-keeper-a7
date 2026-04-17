@@ -3,6 +3,11 @@ import Searching from "@/Components/TimeLine/Searching";
 import SortedData from "@/Components/TimeLine/SortedData";
 import TimeLineCard from "@/Components/TimeLine/TimeLineCard";
 
+export const metadata = {
+  title: "Timeline | Keep Keeper",
+  description: "Explore your relationship history with Keep Keeper's Timeline. View past interactions, important dates, and milestones in one convenient place. Whether it's birthdays, anniversaries, or memorable moments, the Timeline helps you cherish and reflect on your connections. Stay organized and never miss a beat in your relationships with Keep Keeper's Timeline feature.",
+};
+
 const TimeLine = () => {
   return (
     <section className="bg-slate-100 min-h-screen py-8 md:py-12">

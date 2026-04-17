@@ -4,6 +4,11 @@ import { useContext } from "react";
 import { FaChartPie } from "react-icons/fa";
 import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
+export const metadata = {
+  title: "Stats | Keep Keeper",
+  description: "View your friendship analytics with Keep Keeper's Stats. See how you interact with your friends over time and gain insights into your relationship patterns. Stay connected and nurture your relationships with Keep Keeper's powerful analytics.",
+};
+
 const Stats = () => {
   const { timeLineData } = useContext(DataContext);
   const callCount = timeLineData.filter((item) => item.type == "Call").length;

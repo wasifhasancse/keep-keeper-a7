@@ -11,6 +11,11 @@ import { FaHistory } from "react-icons/fa";
 import { FiArchive, FiMail, FiTrash2 } from "react-icons/fi";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 
+export const metadata = {
+  title: "Friend Details | Keep Keeper",
+  description: "View detailed information about your friends and their interaction history with Keep Keeper. Stay connected and nurture your relationships with Keep Keeper's comprehensive friend management features.",
+};
+
 const formatDate = (isoDate) => {
   const parsedDate = new Date(isoDate);
 

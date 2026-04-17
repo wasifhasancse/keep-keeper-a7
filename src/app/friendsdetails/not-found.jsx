@@ -42,8 +42,7 @@ const PageNotFound = () => {
           </h2>
 
           <p className="mt-3 text-gray-500 text-sm md:text-base leading-relaxed">
-            Sorry, the user you’re looking for doesn’t exist, has been removed
-            or is temporarily unavailable.
+            The user you are looking for does not exist or has been removed. Please check the URL or return to the homepage.
           </p>
 
           <Link href={"/"}>

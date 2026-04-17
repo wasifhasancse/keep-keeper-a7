@@ -51,7 +51,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <Link href={"/"} className="text-3xl font-bold text-green-300">
+          <Link href={"/"} className="text-3xl font-bold text-green-400">
             <span className="text-green-900 font-black pl-5">Keen</span>Keeper
           </Link>
         </div>

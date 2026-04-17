@@ -20,5 +20,12 @@ The app is designed around one simple idea: important relationships should not b
 2. Detailed friend management pages with profile information, relationship goals, next due dates, recent interaction history, and quick actions for calls, texts, and video chats.
 3. Searchable and filterable timeline with analytics support, allowing users to explore communication activity and visualize interaction patterns by type.
 
-## Visited this project?
- [keep-keeper.vercel.app](https://keep-keeper.vercel.app)
+## Live Link
+
+[Visit Keep Keeper](https://keep-keeper-a7.vercel.app/)
+
+Copy this link:
+
+```text
+https://keep-keeper-a7.vercel.app/
+```
